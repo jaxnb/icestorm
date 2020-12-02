@@ -394,6 +394,10 @@ int main(int argc, char **argv)
 							"-- Achieved output frequency:  %8.3f MHz\n"
 							"--\n\n",
 							f_pllin, f_pllout, best_fout);
+				
+				// Imports
+				fprintf(f, 	"library ieee;\n"
+							"use ieee.std_logic_1164.all;\n\n");
 
 				// generate VHDL entity
 				fprintf(f,  "entity %s is\n\tport (\n"
